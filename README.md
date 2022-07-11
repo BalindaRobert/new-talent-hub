@@ -1,8 +1,5 @@
-# new-talent-hub
- the purpose of this system is to help finding job opportunities for students during and their studies. students have a challenge gettting employment after school so my system would be an opportunity to connect these students to the outside community (employers) who will see thier various talents and academic potentials and in that way these students my get jobs. basically students will constantly keep updating information about themselves such as academic documents, skills, experience etc  
-###################
+
 What is CodeIgniter
-###################
 
 CodeIgniter is an Application Development Framework - a toolkit - for people
 who build web sites using PHP. Its goal is to enable you to develop projects
