@@ -145,5 +145,109 @@ class Crud_model extends CI_Model
 		
 		return $res ? 1 : 0;
 	}
+	public function save3()
+	{
+		$institution = $this->input->post('institution');
+		$subject = $this->input->post('subject');
+		$startingdate = $this->input->post('startingdate');
+		$completedate = $this->input->post('completedate');
+		$grade = $this->input->post('grade');
+		$degree = $this->input->post('degree');
+			
+		$data = array(				
+				'institution' => $institution,
+				'startingdate' => $startingdate,
+				'subject' => $subject,
+				'completedate' => $completedate,			
+				'grade' => $grade,
+				'degree' => $degree,
+				);
+				
+			
+		$this->db->where('user_id',$this->session->userdata('user_id'));
+		
+		$res = $this->db->update('profile' , $data);
+		
+		return $res ? 1 : 0;
+	}
+	public function save4()
+	{
+		$companyname = $this->input->post('companyname');
+		$location = $this->input->post('location');
+		$jobposition = $this->input->post('jobposition');
+		$periodfrom = $this->input->post('periodfrom');
+		$periodto = $this->input->post('periodto');
+			
+		$data = array(				
+				'companyname' => $companyname,
+				'location' => $location,
+				'jobposition' => $jobposition,
+				'periodfrom' => $periodfrom,			
+				'periodto' => $periodto,
+				
+				);
+				
+			
+		$this->db->where('user_id',$this->session->userdata('user_id'));
+		
+		$res = $this->db->update('profile' , $data);
+		
+		return $res ? 1 : 0;
+	}
+	public function save5()
+	{
+		
+		$fname = $this->input->post('fname');
+		$lname = $this->input->post('lname');
+		$dob = $this->input->post('dob');
+		$gender = $this->input->post('gender');
+		$address = $this->input->post('address');
+		$country = $this->input->post('country');
+		$phone = $this->input->post('phone');
+		$district = $this->input->post('district');
+		$sector = $this->input->post('sector');
+		$institution = $this->input->post('institution');
+		$subject = $this->input->post('subject');
+		$startingdate = $this->input->post('startingdate');
+		$completedate = $this->input->post('completedate');
+		$grade = $this->input->post('grade');
+		$degree = $this->input->post('degree');
+		$companyname = $this->input->post('companyname');
+		$location = $this->input->post('location');
+		$jobposition = $this->input->post('jobposition');
+		$periodfrom = $this->input->post('periodfrom');
+		$periodto = $this->input->post('periodto');
+		
+			
+		$data = array(				
+				'firstname' => $fname,
+				'lastname' => $lname,
+				'birthdate' => $dob,
+				'gender' => $gender,
+				'address' => $address,
+				'district' => $district,
+				'country' => $country,
+				'phonenumber' => $phone,			
+				'sector' => $sector,
+				'institution' => $institution,
+				'startingdate' => $startingdate,
+				'subject' => $subject,
+				'completedate' => $completedate,			
+				'grade' => $grade,
+				'degree' => $degree,
+				'companyname' => $companyname,
+				'location' => $location,
+				'jobposition' => $jobposition,
+				'periodfrom' => $periodfrom,			
+				'periodto' => $periodto,
+				);
+				
+			
+		$this->db->where('user_id',$this->session->userdata('user_id'));
+		
+		$res = $this->db->update('profile' , $data);
+		
+		return $res ? 1 : 0;
+	}
 	
 }

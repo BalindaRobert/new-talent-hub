@@ -26,7 +26,7 @@
                                     
                                 </div>
                             </div>
-                            <h4 class="doctor-name text-ellipsis"><a href="profile.html"><?php echo  $row['firstname']; ?>&nbsp; <?php echo  $row['lastname']; ?></a></h4>
+                            <h4 class="doctor-name text-ellipsis"><a href="#"><?php echo  $row['firstname']; ?>&nbsp; <?php echo  $row['lastname']; ?></a></h4>
                             <div class="doc-prof"><?php echo  $row['sector']; ?></div>
                             <div class="user-country">
                                 <i class="fa fa-map-marker"></i> <?php echo  $row['address']; ?>

@@ -21,7 +21,7 @@
     <div class="main-wrapper">
         <div class="header">
 			<div class="header-left">
-				<a href="<?php echo base_url();?>Client" class="logo">
+				<a href="<?php echo base_url();?>Client/employer" class="logo">
 					<img src="<?php echo base_url();?>assets/img/logo.png" width="35" height="35" alt=""> <span>THE TALENT HUB</span>
 				</a>
 			</div>

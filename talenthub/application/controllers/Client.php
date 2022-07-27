@@ -96,7 +96,57 @@ class Client extends CI_Controller {
 		}
 		
 		}
-		
+		if($param=="save3"){
+			$saved = $this->Crud_model->save3();
+			
+			if ($saved) 
+			{
+				
+				$this->session->set_flashdata('success', 'Updated successfull');			
+				redirect(base_url() . 'Client/jobseeker', 'refresh');
+			}
+			else
+			{
+				$this->session->set_flashdata('failed','Update  Failed');
+				redirect(base_url() . 'Client/jobseeker/editprof', 'refresh');
+			}
+			
+			}
+			if($param=="save4"){
+				$saved = $this->Crud_model->save4();
+				
+				if ($saved) 
+				{
+					
+					$this->session->set_flashdata('success', 'Updated successfull');			
+					redirect(base_url() . 'Client/jobseeker', 'refresh');
+				}
+				else
+				{
+					$this->session->set_flashdata('failed','Update  Failed');
+					redirect(base_url() . 'Client/jobseeker/editprof', 'refresh');
+				}
+				
+				}
+				if($param=="save5"){
+			
+					$saved = $this->Crud_model->save5();
+					
+					if ($saved) 
+					{
+						
+						$this->session->set_flashdata('success', 'Updated successfull');			
+						redirect(base_url() . 'Client/jobseeker', 'refresh');
+					}
+					else
+					{
+						$this->session->set_flashdata('failed','Update  Failed');
+						redirect(base_url() . 'Client/jobseeker/editprof', 'refresh');
+					}
+						
+					}
+				
+			
 	}
 	
 	

@@ -60,7 +60,7 @@
 					<ul class="nav nav-tabs nav-tabs-bottom">
 						<li class="nav-item"><a class="nav-link active" href="#about-cont" data-toggle="tab">Education</a></li>
 						<li class="nav-item"><a class="nav-link" href="#bottom-tab2" data-toggle="tab">Experience</a></li>
-						<li class="nav-item"><a class="nav-link" href="#bottom-tab3" data-toggle="tab">Messages</a></li>
+						
 					</ul>
 
 					<div class="tab-content">
@@ -71,15 +71,14 @@
                             <h3 class="card-title">Education Informations</h3>
                             <div class="experience-box">
                                 <ul class="experience-list">
-                                    <li>
+                                <li>
                                         <div class="experience-user">
                                             <div class="before-circle"></div>
                                         </div>
                                         <div class="experience-content">
                                             <div class="timeline-content">
-                                                <a href="#/" class="name">International College of Medical Science (UG)</a>
-                                                <div>MBBS</div>
-                                                <span class="time">2001 - 2003</span>
+                                                <a href="#/" class="name">Institution:</a>
+                                                <span class="time"><?php echo ($clientdata->institution=="")?'Not Set':$clientdata->institution;?></span>
                                             </div>
                                         </div>
                                     </li>
@@ -89,9 +88,52 @@
                                         </div>
                                         <div class="experience-content">
                                             <div class="timeline-content">
-                                                <a href="#/" class="name">International College of Medical Science (PG)</a>
-                                                <div>MD - Obstetrics & Gynaecology</div>
-                                                <span class="time">1997 - 2001</span>
+                                                <a href="#/" class="name">Subject:</a>
+                                                <span class="time"><?php echo ($clientdata->subject=="")?'Not Set':$clientdata->subject;?></span>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="experience-user">
+                                            <div class="before-circle"></div>
+                                        </div>
+                                        <div class="experience-content">
+                                            <div class="timeline-content">
+                                                <a href="#/" class="name">Starting Date:</a>
+                                                <span class="time"><?php echo ($clientdata->startingdate=="")?'Not Set':$clientdata->startingdate;?></span>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="experience-user">
+                                            <div class="before-circle"></div>
+                                        </div>
+                                        <div class="experience-content">
+                                            <div class="timeline-content">
+                                                <a href="#/" class="name">Complete Date:</a>
+                                                <span class="time"><?php echo ($clientdata->completedate=="")?'Not Set':$clientdata->completedate;?></span>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="experience-user">
+                                            <div class="before-circle"></div>
+                                        </div>
+                                        <div class="experience-content">
+                                            <div class="timeline-content">
+                                                <a href="#/" class="name">Degree:</a>
+                                                <span class="time"><?php echo ($clientdata->degree=="")?'Not Set':$clientdata->degree;?></span>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="experience-user">
+                                            <div class="before-circle"></div>
+                                        </div>
+                                        <div class="experience-content">
+                                            <div class="timeline-content">
+                                                <a href="#/" class="name">Grade:</a>
+                                                <span class="time"><?php echo ($clientdata->grade=="")?'Not Set':$clientdata->grade;?></span>
                                             </div>
                                         </div>
                                     </li>
@@ -107,14 +149,14 @@
                             <h3 class="card-title">Experience</h3>
                             <div class="experience-box">
                                 <ul class="experience-list">
-                                    <li>
+                                <li>
                                         <div class="experience-user">
                                             <div class="before-circle"></div>
                                         </div>
                                         <div class="experience-content">
                                             <div class="timeline-content">
-                                                <a href="#/" class="name">Consultant Gynecologist</a>
-                                                <span class="time">Jan 2014 - Present (4 years 8 months)</span>
+                                                <a href="#/" class="name">Company Name:</a>
+                                                <span class="time"><?php echo ($clientdata->companyname=="")?'Not Set':$clientdata->companyname;?></span>
                                             </div>
                                         </div>
                                     </li>
@@ -124,8 +166,8 @@
                                         </div>
                                         <div class="experience-content">
                                             <div class="timeline-content">
-                                                <a href="#/" class="name">Consultant Gynecologist</a>
-                                                <span class="time">Jan 2009 - Present (6 years 1 month)</span>
+                                                <a href="#/" class="name">Location:</a>
+                                                <span class="time"><?php echo ($clientdata->location=="")?'Not Set':$clientdata->location;?></span>
                                             </div>
                                         </div>
                                     </li>
@@ -135,8 +177,30 @@
                                         </div>
                                         <div class="experience-content">
                                             <div class="timeline-content">
-                                                <a href="#/" class="name">Consultant Gynecologist</a>
-                                                <span class="time">Jan 2004 - Present (5 years 2 months)</span>
+                                                <a href="#/" class="name">Job Position:</a>
+                                                <span class="time"><?php echo ($clientdata->jobposition=="")?'Not Set':$clientdata->jobposition;?></span>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="experience-user">
+                                            <div class="before-circle"></div>
+                                        </div>
+                                        <div class="experience-content">
+                                            <div class="timeline-content">
+                                                <a href="#/" class="name">Period from:</a>
+                                                <span class="time"><?php echo ($clientdata->periodfrom=="")?'Not Set':$clientdata->periodfrom;?></span>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="experience-user">
+                                            <div class="before-circle"></div>
+                                        </div>
+                                        <div class="experience-content">
+                                            <div class="timeline-content">
+                                                <a href="#/" class="name">Period to:</a>
+                                                <span class="time"><?php echo ($clientdata->periodto=="")?'Not Set':$clientdata->periodto;?></span>
                                             </div>
                                         </div>
                                     </li>
@@ -144,10 +208,7 @@
                             </div>
                         </div>
                     
-						</div>
-						<div class="tab-pane" id="bottom-tab3">
-							Tab content 3
-						</div>
+						
 					</div>
 				</div>
             </div>

@@ -20,7 +20,7 @@
 }
 
 body {
-	background-image: url("assets/img/back.jpg");
+	background-image: url("<?php echo base_url();?>assets/img/back.jpg");
 	transition: background-image 3s;
 	background-size: cover;
 	display: flex;

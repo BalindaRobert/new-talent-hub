@@ -5,6 +5,7 @@
                         <h4 class="page-title">Edit Profile</h4>
                     </div>
                 </div>
+                
                
                     <div class="card-box">
                         <h3 class="card-title">Personal Information</h3>
@@ -121,24 +122,25 @@
                     </div>
                     <div class="card-box">
                         <h3 class="card-title">Education Informations</h3>
+                        <form action="<?php echo base_url();?>Client/jobseekersavedeatails/save3" method="post" enctype="multipart/form-data">
                         <div class="row">
                             <div class="col-md-6">
                                 <div class="form-group form-focus">
                                     <label class="focus-label">Institution</label>
-                                    <input type="text" class="form-control floating" value="Oxford University">
+                                    <input type="text" class="form-control floating" name="institution" value="<?php echo ($this->Crud_model->get_clientdetails("institution")=="")?'':$this->Crud_model->get_clientdetails("institution");?>">
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="form-group form-focus">
                                     <label class="focus-label">Subject</label>
-                                    <input type="text" class="form-control floating" value="Computer Science">
+                                    <input type="text" class="form-control floating" name="subject" value="<?php echo ($this->Crud_model->get_clientdetails("subject")=="")?'':$this->Crud_model->get_clientdetails("subject");?>">
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="form-group form-focus">
                                     <label class="focus-label">Starting Date</label>
 									<div class="cal-icon">
-										<input type="text" class="form-control floating datetimepicker" value="01/06/2002">
+										<input type="text" class="form-control floating datetimepicker" name="startingdate" value="<?php echo ($this->Crud_model->get_clientdetails("startingdate")=="")?'':$this->Crud_model->get_clientdetails("startingdate");?>">
 									</div>
                                 </div>
                             </div>
@@ -146,53 +148,55 @@
                                 <div class="form-group form-focus">
                                     <label class="focus-label">Complete Date</label>
 									<div class="cal-icon">
-										<input type="text" class="form-control floating datetimepicker" value="31/05/2006">
+										<input type="text" class="form-control floating datetimepicker" name="completedate" value="<?php echo ($this->Crud_model->get_clientdetails("completedate")=="")?'':$this->Crud_model->get_clientdetails("completedate");?>">
 									</div>
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="form-group form-focus">
                                     <label class="focus-label">Degree</label>
-                                    <input type="text" class="form-control floating" value="BE Computer Science">
+                                    <input type="text" class="form-control floating" name="degree" value="<?php echo ($this->Crud_model->get_clientdetails("degree")=="")?'':$this->Crud_model->get_clientdetails("degree");?>">
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="form-group form-focus">
                                     <label class="focus-label">Grade</label>
-                                    <input type="text" class="form-control floating" value="Grade A">
+                                    <input type="text" class="form-control floating" name="grade" value="<?php echo ($this->Crud_model->get_clientdetails("grade")=="")?'':$this->Crud_model->get_clientdetails("grade");?>">
                                 </div>
                             </div>
                         </div>
                         <div class="add-more">
-                            <a href="#" class="btn btn-primary"><i class="fa fa-plus"></i> Add More Institute</a>
+                        <button type="submit" class="btn btn-primary"><i class="fa fa-save"></i> Save & Update</button>
                         </div>
+                        </form>
                     </div>
                     <div class="card-box">
                         <h3 class="card-title">Experience Informations</h3>
+                        <form action="<?php echo base_url();?>Client/jobseekersavedeatails/save4" method="post" enctype="multipart/form-data">
                         <div class="row">
                             <div class="col-md-6">
                                 <div class="form-group form-focus">
                                     <label class="focus-label">Company Name</label>
-                                    <input type="text" class="form-control floating" value="Digital Devlopment Inc">
+                                    <input type="text" class="form-control floating" name="companyname" value="<?php echo ($this->Crud_model->get_clientdetails("companyname")=="")?'':$this->Crud_model->get_clientdetails("companyname");?>">
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="form-group form-focus">
                                     <label class="focus-label">Location</label>
-                                    <input type="text" class="form-control floating" value="United States">
+                                    <input type="text" class="form-control floating" name="location" value="<?php echo ($this->Crud_model->get_clientdetails("location")=="")?'':$this->Crud_model->get_clientdetails("location");?>">
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="form-group form-focus">
                                     <label class="focus-label">Job Position</label>
-                                    <input type="text" class="form-control floating" value="Web Developer">
+                                    <input type="text" class="form-control floating" name="jobposition" value="<?php echo ($this->Crud_model->get_clientdetails("jobposition")=="")?'':$this->Crud_model->get_clientdetails("jobposition");?>">
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="form-group form-focus">
                                     <label class="focus-label">Period From</label>
 									<div class="cal-icon">
-										<input type="text" class="form-control floating datetimepicker" value="01/07/2007">
+										<input type="text" class="form-control floating datetimepicker" name="periodfrom" value="<?php echo ($this->Crud_model->get_clientdetails("periodfrom")=="")?'':$this->Crud_model->get_clientdetails("periodfrom");?>">
 									</div>
                                 </div>
                             </div>
@@ -200,19 +204,23 @@
                                 <div class="form-group form-focus">
                                     <label class="focus-label">Period To</label>
 									<div class="cal-icon">
-										<input type="text" class="form-control floating datetimepicker" value="08/06/2018">
+										<input type="text" class="form-control floating datetimepicker" name="periodto" value="<?php echo ($this->Crud_model->get_clientdetails("periodto")=="")?'':$this->Crud_model->get_clientdetails("periodto");?>">
 									</div>
                                 </div>
                             </div>
                         </div>
                         <div class="add-more">
-                            <a href="#" class="btn btn-primary"><i class="fa fa-plus"></i> Add More Experience</a>
+                        <button type="submit" class="btn btn-primary"><i class="fa fa-save"></i> Save & Update</button>
                         </div>
+                           </form>
+                           <div>
+                           <form action="<?php echo base_url();?>Client/jobseekersavedeatails/save5" method="post" enctype="multipart/form-data">
+                            <button type="submit" class="btn btn-primary" allign="center">Save</button>
+                            </form>
+                           </div>
                     </div>
-                    <div class="text-center m-t-20">
-                        <button class="btn btn-primary submit-btn" type="button">Save</button>
-                    </div>
-                </form>
+                    
+                
             </div>
             
 		</div>

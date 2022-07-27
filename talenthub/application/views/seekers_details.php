@@ -60,7 +60,7 @@
 					<ul class="nav nav-tabs nav-tabs-bottom">
 						<li class="nav-item"><a class="nav-link active" href="#about-cont" data-toggle="tab">Education</a></li>
 						<li class="nav-item"><a class="nav-link" href="#bottom-tab2" data-toggle="tab">Experience</a></li>
-						<li class="nav-item"><a class="nav-link" href="#bottom-tab3" data-toggle="tab">Messages</a></li>
+						
 					</ul>
 
 					<div class="tab-content">
@@ -68,18 +68,17 @@
                 <div class="row">
                     <div class="col-md-12">
                         <div class="card-box">
-                            <h3 class="card-title">Education Informations</h3>
+                            <h3 class="card-title">Education Information</h3>
                             <div class="experience-box">
                                 <ul class="experience-list">
-                                    <li>
+                                <li>
                                         <div class="experience-user">
                                             <div class="before-circle"></div>
                                         </div>
                                         <div class="experience-content">
                                             <div class="timeline-content">
-                                                <a href="#/" class="name">International College of Medical Science (UG)</a>
-                                                <div>MBBS</div>
-                                                <span class="time">2001 - 2003</span>
+                                                <a href="#/" class="name">Institution:</a>
+                                                <span class="time"><?php echo ($this->Crud_model->get_clientdetails("institution")=="")?'Not Set':$this->Crud_model->get_clientdetails("institution");?></span>
                                             </div>
                                         </div>
                                     </li>
@@ -89,9 +88,52 @@
                                         </div>
                                         <div class="experience-content">
                                             <div class="timeline-content">
-                                                <a href="#/" class="name">International College of Medical Science (PG)</a>
-                                                <div>MD - Obstetrics & Gynaecology</div>
-                                                <span class="time">1997 - 2001</span>
+                                                <a href="#/" class="name">Subject:</a>
+                                                <span class="time"><?php echo ($this->Crud_model->get_clientdetails("subject")=="")?'Not Set':$this->Crud_model->get_clientdetails("subject");?></span>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="experience-user">
+                                            <div class="before-circle"></div>
+                                        </div>
+                                        <div class="experience-content">
+                                            <div class="timeline-content">
+                                                <a href="#/" class="name">Starting Date:</a>
+                                                <span class="time"><?php echo ($this->Crud_model->get_clientdetails("startingdate")=="")?'Not Set':$this->Crud_model->get_clientdetails("startingdate");?></span>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="experience-user">
+                                            <div class="before-circle"></div>
+                                        </div>
+                                        <div class="experience-content">
+                                            <div class="timeline-content">
+                                                <a href="#/" class="name">Complete Date:</a>
+                                                <span class="time"><?php echo ($this->Crud_model->get_clientdetails("completedate")=="")?'Not Set':$this->Crud_model->get_clientdetails("completedate");?></span>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="experience-user">
+                                            <div class="before-circle"></div>
+                                        </div>
+                                        <div class="experience-content">
+                                            <div class="timeline-content">
+                                                <a href="#/" class="name">Degree:</a>
+                                                <span class="time"><?php echo ($this->Crud_model->get_clientdetails("degree")=="")?'Not Set':$this->Crud_model->get_clientdetails("degree");?></span>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="experience-user">
+                                            <div class="before-circle"></div>
+                                        </div>
+                                        <div class="experience-content">
+                                            <div class="timeline-content">
+                                                <a href="#/" class="name">Grade:</a>
+                                                <span class="time"><?php echo ($this->Crud_model->get_clientdetails("grade")=="")?'Not Set':$this->Crud_model->get_clientdetails("grade");?></span>
                                             </div>
                                         </div>
                                     </li>
@@ -113,8 +155,8 @@
                                         </div>
                                         <div class="experience-content">
                                             <div class="timeline-content">
-                                                <a href="#/" class="name">Consultant Gynecologist</a>
-                                                <span class="time">Jan 2014 - Present (4 years 8 months)</span>
+                                                <a href="#/" class="name">Company Name:</a>
+                                                <span class="time"><?php echo ($this->Crud_model->get_clientdetails("companyname")=="")?'Not Set':$this->Crud_model->get_clientdetails("companyname");?></span>
                                             </div>
                                         </div>
                                     </li>
@@ -124,8 +166,8 @@
                                         </div>
                                         <div class="experience-content">
                                             <div class="timeline-content">
-                                                <a href="#/" class="name">Consultant Gynecologist</a>
-                                                <span class="time">Jan 2009 - Present (6 years 1 month)</span>
+                                                <a href="#/" class="name">Location:</a>
+                                                <span class="time"><?php echo ($this->Crud_model->get_clientdetails("location")=="")?'Not Set':$this->Crud_model->get_clientdetails("location");?></span>
                                             </div>
                                         </div>
                                     </li>
@@ -135,8 +177,30 @@
                                         </div>
                                         <div class="experience-content">
                                             <div class="timeline-content">
-                                                <a href="#/" class="name">Consultant Gynecologist</a>
-                                                <span class="time">Jan 2004 - Present (5 years 2 months)</span>
+                                                <a href="#/" class="name">Job Position:</a>
+                                                <span class="time"><?php echo ($this->Crud_model->get_clientdetails("jobposition")=="")?'Not Set':$this->Crud_model->get_clientdetails("jobposition");?></span>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="experience-user">
+                                            <div class="before-circle"></div>
+                                        </div>
+                                        <div class="experience-content">
+                                            <div class="timeline-content">
+                                                <a href="#/" class="name">Period from:</a>
+                                                <span class="time"><?php echo ($this->Crud_model->get_clientdetails("periodfrom")=="")?'Not Set':$this->Crud_model->get_clientdetails("periodfrom");?></span>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="experience-user">
+                                            <div class="before-circle"></div>
+                                        </div>
+                                        <div class="experience-content">
+                                            <div class="timeline-content">
+                                                <a href="#/" class="name">Period to:</a>
+                                                <span class="time"><?php echo ($this->Crud_model->get_clientdetails("periodto")=="")?'Not Set':$this->Crud_model->get_clientdetails("periodto");?></span>
                                             </div>
                                         </div>
                                     </li>
